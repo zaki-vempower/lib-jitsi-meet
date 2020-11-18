@@ -23,3 +23,5 @@ export const DEVICE_LIST_CHANGED = 'mediaDevices.devicechange';
  */
 export const PERMISSION_PROMPT_IS_SHOWN
     = 'mediaDevices.permissionPromptIsShown';
+
+export const SLOW_GET_USER_MEDIA = 'mediaDevices.slowGetUserMedia';

@@ -119,7 +119,9 @@ function initEnumerateDevicesWithCallback() {
                 .then(devices => {
                     updateKnownDevices(devices);
                     callback(devices);
-                }, () => {
+                })
+                .catch(error => {
+                    logger.warn(`Failed to  enumerate devices. ${error}`);
                     updateKnownDevices([]);
                     callback([]);
                 });
@@ -1471,6 +1473,14 @@ class RTCUtils extends Listenable {
      */
     getCurrentlyAvailableMediaDevices() {
         return availableDevices;
+    }
+
+    /**
+     * Returns whether available devices have permissions granted
+     * @returns {Boolean}
+     */
+    arePermissionsGrantedForAvailableDevices() {
+        return availableDevices.some(device => Boolean(device.label));
     }
 
     /**
