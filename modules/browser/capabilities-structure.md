@@ -1,4 +1,4 @@
-capabilities.json stores the capabilities of Jitsi Meet per browser per version of the browser. The JSON structure is the following:
+capabilities.json stores the capabilities of Meet Hour per browser per version of the browser. The JSON structure is the following:
 ```
 {
     <browser_name>: Array<CapabilitiesByVersion>
@@ -38,7 +38,7 @@ The `CapabilitiesByVersion` objects have the following structure:
 
 For versions of Chrome lower or equal to 1.0.0.0 will have capabilities A, versions between 1.0.0.0 and 3.0.0.0 will have capabilities B and versions greater than 3.0.0.0 will have capabilities C. The last element in the array doesn't have a version property because it stores information for any version that is greater than 3.0.0.0.
 
-The capabilities property of `CapabilitiesByVersion` object stores the capabilities for the use case where Jitsi Meet is not loaded in an iframe. For the use case when Jitsi Meet is loaded in an iframe the capabilities are calculated by `Object.assign(capabilities, iframeCapabilities)`.
+The capabilities property of `CapabilitiesByVersion` object stores the capabilities for the use case where Meet Hour is not loaded in an iframe. For the use case when Meet Hour is loaded in an iframe the capabilities are calculated by `Object.assign(capabilities, iframeCapabilities)`.
 
 
 If the calculated capabilities are `undefined` this version is considered  unsupported.

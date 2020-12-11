@@ -1,6 +1,6 @@
-# Jitsi Meet API library
+# Meet Hour API library
 
-You can use Jitsi Meet API to create Jitsi Meet video conferences with a custom GUI.
+You can use Meet Hour API to create Meet Hour video conferences with a custom GUI.
 
 ## Installation
 
@@ -23,7 +23,7 @@ and to run unit tests:
 ```
 npm test
 ```
-if you need to rebuild lib-jitsi-meet.min.js
+if you need to rebuild lib-meet-hour.min.js
 
 ```
 npm run postinstall

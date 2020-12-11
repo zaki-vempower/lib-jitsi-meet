@@ -192,7 +192,7 @@ function getConstraints(um, options = {}) {
     // This is a temporary solution, in future we will fully split old and
     // new style constraints when new versions of Chromium and Firefox will
     // have stable support of new constraints format. For more information
-    // @see https://github.com/jitsi/lib-jitsi-meet/pull/136
+    // @see https://github.com/jitsi/lib-meet-hour/pull/136
     const isNewStyleConstraintsSupported
         = browser.isFirefox()
             || browser.isSafari()
@@ -663,7 +663,7 @@ function onMediaDevicesListChanged(devicesReceived) {
 
     sendDeviceListToAnalytics(availableDevices);
 
-    // Used by tracks to update the real device id before the consumer of lib-jitsi-meet receives the new device list.
+    // Used by tracks to update the real device id before the consumer of lib-meet-hour receives the new device list.
     eventEmitter.emit(RTCEvents.DEVICE_LIST_WILL_CHANGE, availableDevices);
 
     eventEmitter.emit(RTCEvents.DEVICE_LIST_CHANGED, availableDevices);

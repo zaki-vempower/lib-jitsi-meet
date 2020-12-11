@@ -107,13 +107,13 @@ function getAnalyticsAttributesFromOptions(options) {
 /**
  * Tries to deal with the following problem: {@code JitsiMeetJS} is not only
  * this module, it's also a global (i.e. attached to {@code window}) namespace
- * for all globals of the projects in the Jitsi Meet family. If lib-jitsi-meet
+ * for all globals of the projects in the Meet Hour family. If lib-meet-hour
  * is loaded through an HTML {@code script} tag, {@code JitsiMeetJS} will
  * automatically be attached to {@code window} by webpack. Unfortunately,
  * webpack's source code does not check whether the global variable has already
  * been assigned and overwrites it. Which is OK for the module
  * {@code JitsiMeetJS} but is not OK for the namespace {@code JitsiMeetJS}
- * because it may already contain the values of other projects in the Jitsi Meet
+ * because it may already contain the values of other projects in the Meet Hour
  * family. The solution offered here works around webpack by merging all
  * existing values of the namespace {@code JitsiMeetJS} into the module
  * {@code JitsiMeetJS}.
@@ -132,7 +132,7 @@ function _mergeNamespaceAndModule(module) {
 }
 
 /**
- * The public API of the Jitsi Meet library (a.k.a. {@code JitsiMeetJS}).
+ * The public API of the Meet Hour library (a.k.a. {@code JitsiMeetJS}).
  */
 export default _mergeNamespaceAndModule({
 
@@ -215,7 +215,7 @@ export default _mergeNamespaceAndModule({
         if (this.version) {
             const logObject = {
                 id: 'component_version',
-                component: 'lib-jitsi-meet',
+                component: 'lib-meet-hour',
                 version: this.version
             };
 
@@ -311,7 +311,7 @@ export default _mergeNamespaceAndModule({
      * extension. If the desktop extension is not install and checkAgain()==true
      * createLocalTracks will finish with rejected Promise.
      * @param {Function} listener - The listener will be called to notify the
-     * user of lib-jitsi-meet that createLocalTracks is starting external
+     * user of lib-meet-hour that createLocalTracks is starting external
      * extension installation process.
      * NOTE: If the inline installation process is not possible and external
      * installation is enabled the listener property will be called to notify
@@ -620,7 +620,7 @@ export default _mergeNamespaceAndModule({
     },
 
     /**
-     * Informs lib-jitsi-meet about the current network status.
+     * Informs lib-meet-hour about the current network status.
      *
      * @param {boolean} isOnline - {@code true} if the internet connectivity is online or {@code false}
      * otherwise.
@@ -653,7 +653,7 @@ export default _mergeNamespaceAndModule({
 
     /**
      * Represents a hub/namespace for utility functionality which may be of
-     * interest to lib-jitsi-meet clients.
+     * interest to lib-meet-hour clients.
      */
     util: {
         AuthUtil,

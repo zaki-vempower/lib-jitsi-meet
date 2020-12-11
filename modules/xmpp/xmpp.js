@@ -51,7 +51,7 @@ function createConnection({ enableWebsocketResume, serviceUrl = '/http-bind', to
 }
 
 /**
- * Initializes Strophe plugins that need to work with Strophe.Connection directly rather than the lib-jitsi-meet's
+ * Initializes Strophe plugins that need to work with Strophe.Connection directly rather than the lib-meet-hour's
  * {@link XmppConnection} wrapper.
  *
  * @returns {void}

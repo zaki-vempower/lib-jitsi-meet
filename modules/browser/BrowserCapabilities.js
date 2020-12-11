@@ -13,7 +13,7 @@ const MIN_REQUIRED_CHROME_VERSION = 72;
 // and BrowserDetection as separate objects in future.
 
 /**
- * Implements browser capabilities for lib-jitsi-meet.
+ * Implements browser capabilities for lib-meet-hour.
  */
 export default class BrowserCapabilities extends BrowserDetection {
     /**
